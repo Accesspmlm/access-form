@@ -4,6 +4,8 @@ import Cookies from "js-cookie";
 
 import { getCookieTokenName } from "@/config";
 
+const API_URL = import.meta.env.VITE_API;
+
 type Method = "GET" | "POST" | "PUT" | "DELETE";
 
 export interface ErrorDataResponse {
@@ -47,7 +49,7 @@ export const makeRequest = async <T>(
   requireToken = true,
   responseType: ResponseType = "json"
 ): Promise<AxiosResponse<T>> => {
-  const baseUrl = process.env.API + url;
+  const baseUrl = API_URL + url;
 
   const config: AxiosRequestConfig = {
     baseURL: baseUrl,
