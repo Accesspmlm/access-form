@@ -95,7 +95,7 @@ const ModalCreateCompany: React.FC<ModalCreateCompanyProps> = ({
     register,
     watch,
     reset,
-    formState: { errors, isValid },
+    formState: { isValid },
   } = useForm<FormValues>({
     mode: "all" as const,
     resolver: zodResolver(schema),
@@ -264,6 +264,9 @@ const ModalCreateCompany: React.FC<ModalCreateCompanyProps> = ({
   const currentCategories: Category[] = CATEGORIES[dataForm?.industry];
   const currentTags: Tag[] = TAGS[dataForm?.industry];
 
+  type FieldName = "name" | "descriptionEs" | "descriptionEn" | "phone" | "facebook" | "lat" | "lng" | "ubication" | "industry"; // Añade 'email' si ese es un campo válido
+  
+
   return (
     <Modal open={showModal}>
       <Flex w="100vw" h="100vh" justify="center" align="center">
@@ -286,10 +289,9 @@ const ModalCreateCompany: React.FC<ModalCreateCompanyProps> = ({
                 fullWidth
                 color="primary"
                 placeholder={inp.placeholder}
-                {...register(inp.name, {
+                {...register(inp.name as FieldName, {
                   valueAsNumber: inp.valueAsNumber,
                 })}
-                error={errors[inp.name]?.message}
                 type={inp.type}
                 style={{ marginBottom: 18 }}
               />

@@ -1,0 +1,17 @@
+export type TypesText =
+  | 'display-1'
+  | 'display-2'
+  | 'heading-xxl'
+  | 'heading-xl'
+  | 'heading-l'
+  | 'heading-m'
+  | 'heading-s'
+  | 'body-regular'
+  | 'body-small'
+  | 'body-xsmall'
+  | 'title-medium'
+  | 'title-small'
+  | 'title-xsmall'
+  | 'caps-medium'
+  | 'caps-small'
+  | 'caps-xsmall';
