@@ -1,0 +1,32 @@
+export interface FlexProps {
+  display?: string;
+  wrap?: string;
+  boxSizing?: string;
+  gap?: string;
+  pd?: string;
+  mt?: string;
+  mb?: string;
+  ml?: string;
+  mr?: string;
+  direction?: string;
+  align?: string;
+  justify?: string;
+  bg?: string;
+  h?: string;
+  w?: string;
+  color?: string;
+  shadow?: string;
+  cursor?: string;
+  radius?: string;
+  minHeight?: string;
+  $overflowX?: string;
+  $overflowY?: string;
+  position?: string;
+  opacity?: number;
+  sm?: string;
+  md?: string;
+  lg?: string;
+  xl?: string;
+  xxl?: string;
+  bigger?: string;
+}
