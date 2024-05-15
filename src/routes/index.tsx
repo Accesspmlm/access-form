@@ -1,6 +1,6 @@
 import { StyleSheetManager } from "styled-components";
 
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter  } from "react-router-dom";
 
 import AccessRoutes from "./AccessRoutes";
 
@@ -13,9 +13,9 @@ const Navigator = () => {
 
   return (
     <StyleSheetManager shouldForwardProp={shouldForwardProp}>
-      <Router>
+      <BrowserRouter basename="/access-form">
         <AccessRoutes />
-      </Router>
+      </BrowserRouter>
     </StyleSheetManager>
   );
 };
